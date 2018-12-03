@@ -1,0 +1,104 @@
+#/data/data/com.termux/files/usr/bin/bash
+
+clear
+#colors
+cyan='\033[1;36m'
+green='\033[1;32m'
+red='\033[1;31m'
+yellow='\033[1;33m'
+blue='\033[1;34m'
+purple='\033[1;35m'
+reset='\033[0m'
+
+figlet B.C.C | lolcat
+
+echo  "$green __________________________________________________"
+echo $green "|[Author                   ]: InYourKZy      |"
+echo $yellow "|[Version                  ]: banyak            |"
+echo $red   "|[Totalsh                  ]: 30                |"
+echo $blue  "|[Team                     ]: BLACK CYBER CRUSH |"
+echo $white     " |[Phone                    ]: 088809843498       |"
+echo  "$green __________________________________________________"
+echo  "$red        Tool Termux!!"
+echo  "$red  gunakan Tools Dengan Bijak🙏"
+echo  "$blue  -_-_-_-_-_-_-_-_-_-_-_-_-_"
+echo
+sleep 1 
+echo -e $blue"    [ 01 ]> ${white}webdav"
+echo  "============================" | lolcat
+echo -e $blue"    [ 02 ]> ${white}lazymux"
+echo  "============================" | lolcat
+echo -e $blue"    [ 03 ]> ${white}Sql map"
+echo  "============================" | lolcat
+echo -e $blue"    [ 04 ]> ${white}Ubuntu"
+echo  "============================" | lolcat
+echo -e $blue"    [ 05 ]> ${white}Metasploit"
+echo  "============================" | lolcat
+echo -e $blue"    [ 99 ]> ${white}keluar"
+echo  "============================" | lolcat
+echo
+read -p"silahkan pilih=>" slc;
+
+if [ $slc = 1 ] || [ $slc = 01 ]
+then
+clear
+echo -e $green"Menginstall Webdav "
+apt install python2 openssl curl libcurl
+pip2 install urllib3 chardet certifi idna requests
+mkdir ~/webdav
+curl -k -O http://override.waper.co/files/webdav.txt;mv webdav.txt ~/webdav/webdav.py
+fi
+
+if [ $slc = 2 ] || [ $slc = 02 ]
+then
+clear
+echo -e $green"Menginstall Lazymux "
+sleep 1
+pkg install python2
+git clone https://github.com/Gameye98/Lazymux
+clear
+echo -e $green "Berhasil Menginstall"
+cd Lazymux
+chmod +x lazymux.py
+python2 lazymux.py
+fi
+
+if [ $slc = 4 ] || [ $slc = 04 ]
+then
+clear
+echo -e $green"Menginstall SQL map "
+sleep 1
+pkg install python
+pkg install python2
+git clone https://github.com/sqlmapproject/sqlmap
+clear
+echo -e $green "Berhasil Menginstall"		
+cd sqlmap
+python2 sqlmap.py
+fi
+
+if [ $slc = 5 ] || [ $slc = 05 ]
+then
+clear
+echo -e $green"Menginstall Metasploit "
+pkg update && pkg upgrade
+pkg install curl
+pkg install python
+pkg install python2
+curl -LO https://raw.githubusercontent.com/Te
+chzindia/Metasploit_For_Termux/master
+/metasploitTechzindia.sh
+ls
+chmod 777 metasploitTechzindia.sh
+./metasploitTechzindia.sh
+ls
+cd metasploit-framework
+./msfconsole
+fi
+
+if [ $slc = exit ]
+then
+clear
+echo -e $red"Exiting ..."
+exit
+fi
